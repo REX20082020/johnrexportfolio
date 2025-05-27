@@ -5,6 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <style>
+    /* Custom fade-in animation */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
   <!-- Header -->
@@ -13,6 +25,7 @@
       <h1 class="text-2xl font-bold text-blue-600">MyPortfolio</h1>
       <nav class="space-x-4">
         <a href="#about" class="hover:text-blue-600">About</a>
+        <a href="#services" class="hover:text-blue-600">Services</a>
         <a href="#projects" class="hover:text-blue-600">Projects</a>
         <a href="#contact" class="hover:text-blue-600">Contact</a>
       </nav>
@@ -60,37 +73,67 @@
     </div>
   </section>
 
+  <!-- Services Section -->
+  <section id="services" class="py-20 bg-gray-200">
+    <div class="max-w-6xl mx-auto px-4">
+      <h3 class="text-3xl font-bold text-center mb-10">Services</h3>
+      <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="bg-white rounded-lg shadow-md p-4 fade-in transition duration-300 transform hover:scale-105 hover:shadow-lg">
+          <h4 class="text-xl font-semibold mb-2">Web Development</h4>
+          <p class="text-sm mb-4">Custom-built, responsive websites using HTML, CSS, JavaScript, and modern frameworks tailored to your needs.</p>
+          <a href="#contact" class="text-blue-600 hover:underline">Get a Quote</a>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-4 fade-in transition duration-300 transform hover:scale-105 hover:shadow-lg">
+          <h4 class="text-xl font-semibold mb-2">AI Integration</h4>
+          <p class="text-sm mb-4">Integrate AI-powered features like chatbots and automation tools to enhance user experience.</p>
+          <a href="#contact" class="text-blue-600 hover:underline">Get a Quote</a>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-4 fade-in transition duration-300 transform hover:scale-105 hover:shadow-lg">
+          <h4 class="text-xl font-semibold mb-2">Website Maintenance</h4>
+          <p class="text-sm mb-4">Ongoing support and updates to keep your website secure, fast, and up-to-date.</p>
+          <a href="#contact" class="text-blue-600 hover:underline">Get a Quote</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Projects Section -->
   <section id="projects" class="py-20 bg-gray-200">
     <div class="max-w-6xl mx-auto px-4">
       <h3 class="text-3xl font-bold text-center mb-10">Projects</h3>
       <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-        <div class="bg-white rounded-lg shadow-md p-4">
+        <div class="bg-white rounded-lg shadow-md p-4 fade-in transition duration-300 transform hover:scale-105 hover:shadow-lg">
+          <img src="https://via.placeholder.com/300x200?text=Business+Web+App" alt="Business Web App Preview" class="w-full h-48 object-cover rounded-t-lg mb-4" />
           <h4 class="text-xl font-semibold mb-2">Business Web App</h4>
           <p class="text-sm mb-4">A sleek application for business management with responsive UI.</p>
           <a href="#" class="text-blue-600 hover:underline">View Project</a>
         </div>
-        <div class="bg-white rounded-lg shadow-md p-4">
+        <div class="bg-white rounded-lg shadow-md p-4 fade-in transition duration-300 transform hover:scale-105 hover:shadow-lg">
+          <img src="https://via.placeholder.com/300x200?text=Simple+Landing+Page" alt="Simple Landing Page Preview" class="w-full h-48 object-cover rounded-t-lg mb-4" />
           <h4 class="text-xl font-semibold mb-2">Simple Landing Page</h4>
           <p class="text-sm mb-4">A clean and minimal landing page for product launches.</p>
           <a href="#" class="text-blue-600 hover:underline">View Project</a>
         </div>
-        <div class="bg-white rounded-lg shadow-md p-4">
+        <div class="bg-white rounded-lg shadow-md p-4 fade-in transition duration-300 transform hover:scale-105 hover:shadow-lg">
+          <img src="https://via.placeholder.com/300x200?text=AI+Chatbot+Web+App" alt="AI Chatbot Web App Preview" class="w-full h-48 object-cover rounded-t-lg mb-4" />
           <h4 class="text-xl font-semibold mb-2">AI Chatbot Web App</h4>
           <p class="text-sm mb-4">A web application integrated with an AI chatbot for real-time user assistance.</p>
           <a href="#" class="text-blue-600 hover:underline">View Project</a>
         </div>
-        <div class="bg-white rounded-lg shadow-md p-4">
+        <div class="bg-white rounded-lg shadow-md p-4 fade-in transition duration-300 transform hover:scale-105 hover:shadow-lg">
+          <img src="https://via.placeholder.com/300x200?text=2D+Game+Project" alt="2D Game Project Preview" class="w-full h-48 object-cover rounded-t-lg mb-4" />
           <h4 class="text-xl font-semibold mb-2">2D Game Project</h4>
           <p class="text-sm mb-4">An engaging 2D game designed with responsive controls and smooth animations.</p>
           <a href="#" class="text-blue-600 hover:underline">View Project</a>
         </div>
-        <div class="bg-white rounded-lg shadow-md p-4">
+        <div class="bg-white rounded-lg shadow-md p-4 fade-in transition duration-300 transform hover:scale-105 hover:shadow-lg">
+          <img src="https://via.placeholder.com/300x200?text=Landing+Page" alt="Landing Page Preview" class="w-full h-48 object-cover rounded-t-lg mb-4" />
           <h4 class="text-xl font-semibold mb-2">Landing Page</h4>
           <p class="text-sm mb-4">A clean and minimal landing page for product launches.</p>
           <a href="#" class="text-blue-600 hover:underline">View Project</a>
         </div>
-        <div class="bg-white rounded-lg shadow-md p-4">
+        <div class="bg-white rounded-lg shadow-md p-4 fade-in transition duration-300 transform hover:scale-105 hover:shadow-lg">
+          <img src="https://via.placeholder.com/300x200?text=Portfolio+Website" alt="Portfolio Website Preview" class="w-full h-48 object-cover rounded-t-lg mb-4" />
           <h4 class="text-xl font-semibold mb-2">Portfolio Website</h4>
           <p class="text-sm mb-4">My personal portfolio showcasing my skills and projects with a modern design.</p>
           <a href="#" class="text-blue-600 hover:underline">View Project</a>
@@ -137,6 +180,7 @@
   </footer>
 
   <script>
+    // Contact form submission
     document.getElementById('contact-form').addEventListener('submit', async (e) => {
       e.preventDefault();
       const form = e.target;
@@ -163,7 +207,7 @@
       const payload = {
         content: `**New Contact Form Submission**\n\n**Name:** ${name}\n**Email:** ${email}\n**Message:** ${message}`,
         username: 'Portfolio Form',
-        avatar_url: 'https://cdn-icons-png.flaticon.com/512/4712/4712039.png' // Optional: Icon for webhook
+        avatar_url: 'https://cdn-icons-png.flaticon.com/512/4712/4712039.png'
       };
 
       try {
@@ -176,7 +220,7 @@
         });
 
         if (response.ok) {
-          formMessage.textContent = 'Message sent successfully to Discord!';
+          formMessage.textContent = 'Message sent successfully ';
           formMessage.classList.remove('hidden', 'text-red-600');
           formMessage.classList.add('text-green-600');
           form.reset();
@@ -188,6 +232,31 @@
         formMessage.classList.remove('hidden');
         formMessage.classList.add('text-red-600');
       }
+    });
+
+    // Fade-in animation on scroll
+    const fadeInElements = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    fadeInElements.forEach(element => observer.observe(element));
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
     });
   </script>
 </body>
